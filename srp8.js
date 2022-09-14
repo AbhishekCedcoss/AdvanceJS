@@ -8,7 +8,7 @@ function debug() {
   var sal = document.getElementById("sal").value;
   obj.salary = sal;
   console.log(sal);
-  if (obj.salary <= 0) {
+  if (obj.salary < 0) {
     debugger;
     alert("please enter the correct value");
   } else if(obj.salary >= 0) {
