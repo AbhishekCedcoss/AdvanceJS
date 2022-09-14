@@ -21,13 +21,15 @@ try {
         var js = JSON.stringify(arr);
         var obj = JSON.parse(js);
       
-        var table = "<table border ='1'><tr><th>ID</th><th>Name</th><th>Salary</th>";
+        var table = "<table border ='1'><tr><th>ID</th><th>Name</th><th>Salary</th><th>Updated Salary</th>";
         obj.forEach((element) => {
           table +=
             "<tr><td>" +
             element.id +
             "</td><td>" +
             element.name +
+            "</td><td>" +
+            element.salary +
             "</td><td>" +
             element.salary*1.10 +
             "</td></tr>";
