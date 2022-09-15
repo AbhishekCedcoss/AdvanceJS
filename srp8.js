@@ -12,7 +12,7 @@ function debug() {
     debugger;
     alert("please enter the correct value");
     return
-  } else if(obj.salary >= 0) {
+  } else if(obj.salary > 0) {
     var str =
       "<table ='border:1'><tr><th>ID</th><th>Name</th><th>Salary</th></tr><tr><td>" +
       obj.Id +
