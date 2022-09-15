@@ -8,28 +8,27 @@ function add() {
   var empBasic = document.getElementById("Basic").value;
   try {
     if (isNaN(empId)) {
-      alert("wrong");
-      return
+      throw "Sorry ! Wrong input";
+      
     }
-    else if(!isNaN(empName)){
-        alert("wrong")
-        return
-
+    if (!isNaN(empName)) {
+      throw "Sorry ! Wrong input";
+      
     }
-    else if(isNaN(empBasic)){
-        alert("wrong")
-        return
-
+    if (isNaN(empBasic)) {
+      throw "Sorry ! Wrong input";
+      
     }
+    var emp = {
+      Id: empId,
+      Name: empName,
+      Basic: empBasic,
+    };
   } catch (error) {
-    return
+    document.getElementById("er").innerHTML = error;
   }
 
-  var emp = {
-    Id: empId,
-    Name: empName,
-    Basic: empBasic,
-  };
+  
 
   arr.push(emp);
   str +=
@@ -39,7 +38,7 @@ function add() {
     emp.Name +
     "</td> <td id='tds'>" +
     emp.Basic +
-    "</td> "  +
+    "</td> " +
     "</td></tr>";
 
   document.getElementById("res").innerHTML = str;

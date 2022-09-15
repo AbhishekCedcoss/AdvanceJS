@@ -9,8 +9,7 @@ class Emp {
 function disp() {
   const john = new Emp("1", "John", "8000");
   const obj = JSON.stringify(john);
-  console.log(obj);
-  var src = obj
+  var src = obj;
 
   document.getElementById("resf").innerHTML = src;
 }
